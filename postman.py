@@ -4,14 +4,14 @@ import pytest
 BASE_URL = "https://postman-echo.com"
 
 def test_get_with_query_params():
-    params = {"name": "John", "age": 30}
+    params = {"name": "margarita", "age": 56}
     response = requests.get(f"{BASE_URL}/get", params=params)
 
     assert response.status_code == 200
     assert response.json()["args"] == params
 
 def test_post_with_json_body():
-    payload = {"message": "Hello, World!", "id": 123}
+    payload = {"message": "Hello, my dear ticher!", "id": 111}
     response = requests.post(f"{BASE_URL}/post", json=payload)
 
     assert response.status_code == 200
