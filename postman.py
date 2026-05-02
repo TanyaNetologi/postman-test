@@ -4,7 +4,7 @@ import pytest
 BASE_URL = "https://postman-echo.com"
 
 def test_get_with_query_params():
-    params = {"name": "margarita", "age": '56'}
+    params = {"name": "margarita", "age": "56"}
     response = requests.get(f"{BASE_URL}/get", params=params)
 
     assert response.status_code == 200
