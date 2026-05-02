@@ -4,7 +4,7 @@ import pytest
 BASE_URL = "https://postman-echo.com"
 
 def test_get_with_query_params():
-    params = {"name": "margarita", "age": 56}
+    params = {"name": "margarita", "age": '56'}
     response = requests.get(f"{BASE_URL}/get", params=params)
 
     assert response.status_code == 200
@@ -18,10 +18,7 @@ def test_post_with_json_body():
     assert response.json()["json"] == payload
 
 def test_post_with_form_data():
-<<<<<<< HEAD
-=======
 
->>>>>>> 2ad5631b6c3b7c63d4278193f2666552877c0bdd
     form_data = {"username": "testuser", "password": "secretword"}
     form_data = {"username": "testuser", "password": "secret"}
     response = requests.post(f"{BASE_URL}/post", data=form_data)
