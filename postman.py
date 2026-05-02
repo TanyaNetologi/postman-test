@@ -18,11 +18,8 @@ def test_post_with_json_body():
     assert response.json()["json"] == payload
 
 def test_post_with_form_data():
-<<<<<<< HEAD
     form_data = {"username": "testuser", "password": "secretword"}
-=======
     form_data = {"username": "testuser", "password": "secret"}
->>>>>>> 2713147f8c818d638a87ff856a5a3e1547a50926
     response = requests.post(f"{BASE_URL}/post", data=form_data)
 
     assert response.status_code == 200
